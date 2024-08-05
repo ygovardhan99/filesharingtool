@@ -1,6 +1,6 @@
-# Lab07: Flask Exercise 2 – Sign Up
+# File Sharing Tool
 
-This repository contains the implementation of a sign-up/sign-in interface using Flask and SQLite as part of CS421/621 Lab07. The basic and required features of a simple login/signup page are defined here. 
+This repository contains the implementation of a file sharing tool. 
 
 ## Getting Started
 
@@ -8,18 +8,19 @@ This repository contains the implementation of a sign-up/sign-in interface using
 
 - Python 3.x
 - Flask
-- SQLite
-- SQLAlchemy
+- AWS S3
+- AWS SES
+- AWS RDS
 
 ### Installation
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/ygovardhan99/flask-sign-up.git
+    git clone https://github.com/ygovardhan99/filesharingtool.git
     ```
 2. Change to the project directory:
     ```bash
-    cd flask-sign-up
+    cd filesharingtool
     ```
 3. Install the required packages:
     ```bash
@@ -29,7 +30,7 @@ This repository contains the implementation of a sign-up/sign-in interface using
 ### Project Structure
 
 ```
-flask-sign-up/
+filesharingtool/
 │   app.py
 │   models.py
 │   templates/
@@ -39,13 +40,14 @@ flask-sign-up/
 │   ├── signup.html
 │   ├── secretpage.html
 │   └── thankyou.html
+│   └── upload_file.html
 ├── static/
 │   └── style.css
 └── requirements.txt
 ```
 
-- `flask-sign-up/`: Contains the Flask application modules and templates.
-- `flask-sign-up/templates/`: HTML templates for the application.
+- `filesharingtool/`: Contains the Flask application modules and templates.
+- `filesharingtool/templates/`: HTML templates for the application.
 - `requirements.txt`: Lists the dependencies for the project.
 
 ### Running the Application
