@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Password Report</h1>
+    {% if result[0] == 'Success! Password meets all requirements!' %}
+        <div class="alert alert-success" role="alert">
+            {{ result[0] }}
+        </div>
+    {% else %}
+        <ul class="alert alert-danger" role="alert">
+            {% for message in result %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="{{ url_for('index') }}" class="btn btn-primary">Try Again</a>
+{% endblock %}
