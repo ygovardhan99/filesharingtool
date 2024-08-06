@@ -22,7 +22,7 @@ ses_client = boto3.client('ses', region_name=SES_REGION)
 lambda_client = boto3.client('lambda', region_name=S3_REGION)
 
 # RDS Configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:Sunnysamatha#1@database-1.clyayg0am7ei.us-east-1.rds.amazonaws.com/database-1'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://admin:<password>@database-1.clyayg0am7ei.us-east-1.rds.amazonaws.com/database-1'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SESSION_TYPE'] = 'filesystem'
 db = SQLAlchemy(app)
